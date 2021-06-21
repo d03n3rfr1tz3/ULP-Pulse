@@ -32,7 +32,7 @@ float windGust = (1 / (shortestPulse / TIMEFACTOR)) * WINDFACTOR
 
 Another example for the extended pulse counter is the measurement of rain and rain downpour. While the ESP32 is in Deep Sleep, the ULP counts the pulses of a Rain Gauge.
 The rain amount can be calculated easily, because each pulse of the Rain Gauge has a defined amount. On top of that, the shortest pulse can be used to calculate the
-highest rain amount, which I defined as the rain downpour value.
+extrapolated rain amount, which I defined as the rain downpour value. It shows how much rain would have been fallen, if the highest amount had been fallen the whole timeframe.
 
 ```
 RAINFACTOR = 0.2794  // 0.2794 mm per pulse defined by the Rain Gauge
