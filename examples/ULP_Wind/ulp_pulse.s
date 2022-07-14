@@ -178,6 +178,7 @@ pulse_detected:
   move r3, pulse_min
   move r2, pulse_cur
   ld r3, r3, 0
+  ld r2, r2, 0
   sub r3, r2, r3
   jump pulse_lower, ov
   /* Jump to pulse_lower when pulse_min is zero */
